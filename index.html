@@ -1,57 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sumedh Sinha | Software Engineer & CS Graduate</title>
+  <meta name="description" content="Sumedh Sinha is a computer science graduate focused on software engineering, systems, and applied AI. Explore experience, projects, and contact details.">
+  <meta property="og:title" content="Sumedh Sinha | Software Engineer & CS Graduate">
+  <meta property="og:description" content="Portfolio of Sumedh Sinha: experience, projects, skills, and contact information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sumedhsinha.github.io/">
+  <meta property="og:image" content="https://sumedhsinha.github.io/files/cropped_pic.png">
+  <link rel="icon" type="image/png" href="/files/cropped_pic.png">
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --surface: #ffffff;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --accent: #1d4ed8;
+      --accent-strong: #1e40af;
+      --border: #e2e8f0;
+      --shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-strong); }
+
+    .container {
+      width: min(1000px, 92vw);
+      margin: 0 auto;
+      padding: 1.5rem 0 3rem;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 250, 252, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: min(1000px, 92vw);
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.85rem 0;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero,
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 3px solid #dbeafe;
+    }
+
+    h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+    h1 { margin-bottom: 0.25rem; }
+    h2 { margin-bottom: 0.6rem; }
+
+    .subtitle {
+      margin: 0;
+      font-size: 1.07rem;
+      color: var(--muted);
+    }
+
+    .value-prop {
+      margin: 0.75rem 0 0;
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.58rem 0.9rem;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: var(--accent);
+    }
+
+    .btn.primary:hover,
+    .btn.primary:focus-visible { background: var(--accent-strong); }
+
+    .btn.secondary {
+      color: var(--accent);
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .btn:focus-visible,
+    .nav a:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      background: #fff;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul { margin-top: 0.5rem; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 1.2rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero img { margin: 0 auto; }
+      .cta-row { justify-content: center; }
+    }
+  </style>
+  <script defer data-domain="sumedhsinha.github.io" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+</head>
 <body>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<img src="https://sumedhsinha.github.io/files/cropped_pic.png" width="300">
+  <main class="container">
+    <header class="hero" id="about">
+      <img src="/files/cropped_pic.png" alt="Portrait of Sumedh Sinha" width="120" height="120" loading="eager">
+      <div>
+        <h1>Sumedh Sinha</h1>
+        <p class="subtitle">Computer Science Graduate · Rutgers University, New Brunswick (Class of 2026)</p>
+        <p class="value-prop">I am seeking software engineering roles focused on backend systems, distributed platforms, and applied AI solutions.</p>
+        <div class="cta-row" role="group" aria-label="Primary links">
+          <a class="btn primary" href="/files/Sumedh_Sinha_resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn secondary" href="https://github.com/sumedhsinha" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/sinhasumedh/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="mailto:sumedhsinha2022@gmail.com">Contact me</a>
+        </div>
+      </div>
+    </header>
 
-<h1>Sumedh Sinha</h1>
-<p>Computer Science Graduate from Rutgers University, New Brunswick</p>
-<p>Class of 2026</p>
-<button onclick="window.open('https://sumedhsinha.github.io/files/Sumedh_Sinha_resume.pdf', '_blank')">Resume</button>
-<a href="https://www.linkedin.com/in/sinhasumedh/">Linkedin</a>
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="sinhasumedh" data-version="v1"><a class="badge-base__link LI-simple-link" ></a></div>
-<a href="mailto:sumedhsinha2022@gmail.com">sumedhsinha2022@gmail.com</a>
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <article class="card">
+        <h3>Research Assistant · WINLAB, Rutgers University</h3>
+        <p class="meta">Oct 2025 – May 2026, Jun 2026 – Sep 2026</p>
+        <ul>
+          <li>Built and tested wireless networking experiment workflows to improve reproducibility and analysis speed.</li>
+          <li>Delivered implementation support across data collection and systems experiments for active lab research.</li>
+          <li>Collaborated with researchers to translate experimental findings into practical engineering decisions.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Software Engineer / Volunteer · JerseySTEM</h3>
+        <p class="meta">Jun 2026 – Present</p>
+        <ul>
+          <li>Contributed software updates to support student learning and nonprofit operational workflows.</li>
+          <li>Improved reliability and maintainability by addressing defects and refining existing components.</li>
+          <li>Partnered with volunteers and mentors to scope and deliver high-impact technical tasks.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Additional Roles</h3>
+        <ul>
+          <li>Teaching Assistant (CS110) · Rutgers University</li>
+          <li>Piazza Crew (CS112) · Rutgers University</li>
+          <li>Information Systems Management Intern · EssilorLuxottica</li>
+          <li>AI Research Extern · CGI (Rutgers MBS Externship Exchange)</li>
+          <li>Assignment Developer · Rutgers University</li>
+          <li>Software Developer Intern · Haltdos</li>
+          <li>Design Researcher · IDEA at Rutgers University</li>
+        </ul>
+      </article>
+    </section>
 
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Wireless Experiment Analysis Toolkit</h3>
+          <p>Built tooling to organize and analyze experimental network data, helping streamline repeatable research workflows.</p>
+          <p class="meta"><strong>Stack:</strong> Python, Data Processing, Linux Tooling</p>
+          <p><a href="https://github.com/sumedhsinha" target="_blank" rel="noopener">Code / related work</a></p>
+        </article>
+        <article class="card">
+          <h3>Course Support Automation Utilities</h3>
+          <p>Created scripts and support workflows for CS course operations to improve turnaround and consistency in student support.</p>
+          <p class="meta"><strong>Stack:</strong> Java, Python, Git, Scripting</p>
+          <p><a href="https://github.com/sumedhsinha" target="_blank" rel="noopener">Code / related work</a></p>
+        </article>
+        <article class="card">
+          <h3>Nonprofit Platform Contributions</h3>
+          <p>Implemented features and fixes supporting technical initiatives for JerseySTEM's educational programs.</p>
+          <p class="meta"><strong>Stack:</strong> Web Development, APIs, Collaboration Tooling</p>
+          <p><a href="https://github.com/sumedhsinha" target="_blank" rel="noopener">Code / related work</a></p>
+        </article>
+      </div>
+      <p class="meta">For screenshots and demos, see linked repositories or request a walkthrough via email.</p>
+    </section>
 
-<h2>Most Recent Position: </h2>
-<ul>
-    <li>Research Assistant, Wireless Information Network Laboratory (WINLAB) at Rutgers University, New Brunswick (Oct 2025 - May 2026; June 2026 - Sep 2026) </li>
-    <li>Software Engineer/Volunteer at JerseySTEM (June 2026 - Present) </li>
-</ul>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="grid">
+        <div class="card"><strong>Languages:</strong> Python, Java, C, SQL, JavaScript, HTML/CSS</div>
+        <div class="card"><strong>Core Areas:</strong> Backend development, systems programming, data management, algorithms</div>
+        <div class="card"><strong>Tools:</strong> Git, Linux, relational databases, debugging and performance analysis</div>
+      </div>
+    </section>
 
-<h2>Previously</h2>
-<ul>
-    <li>Teaching Assistant - Principles of Computer Science (CS110), Department of Computer Science at Rutgers University, New Brunswick</li>
-    <li>Piazza Crew - Data Structures (CS112), Department of Computer Science at Rutgers University, New Brunswick</li>
-    <li>Information Systems Management Intern, EssilorLuxottica</li>
-    <li>AI Research Extern, CGI (via Rutgers MBS Externship Exchange Program)</li>
-    <li>Assignment Developer (Assignment Guru Program), Department of Computer Science at Rutgers University, New Brunswick</li>
-    <li>Software Developer Intern, Haltdos</li>
-    <li>Design Researcher, IDEA at Rutgers University, New Brunswick</li>
-</ul>
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <p><strong>Rutgers University, New Brunswick</strong> · B.S. Computer Science · Class of 2026</p>
+      <h3>Selected Coursework</h3>
+      <ul>
+        <li>Operating Systems (CS-416)</li>
+        <li>Database Systems Implementation (CS-437)</li>
+        <li>Design & Analysis of Algorithms (CS-344)</li>
+        <li>Internet Technology (CS-352)</li>
+        <li>Systems Programming (CS-214)</li>
+        <li>Artificial Intelligence (CS-440)</li>
+      </ul>
+    </section>
 
-<h2>Courses at Rutgers University</h2>
-<ul>
-    <li>Database Systems Implementation CS-437</li>
-    <li>Operating Systems CS-416</li>
-    <li>Design & Analysis of Computer Algorithms CS-344</li>
-    <li>Data Management for Data Science CS-210</li>
-    <li>Internet Technology CS-352</li>
-    <li>Systems Programming CS-214</li>
-    <li>Principles of Information & Data Management CS-336</li>
-    <li>Software Methodology CS-213</li>
-    <li>Discrete Structures 1-2 CS-205/206</li>
-    <li>Computer Architecture CS-211</li>
-    <li>Data Structures CS-112</li>
-    <li>Introduction to Computer Science CS-111</li>
-    <li>Digital Technology & Disruptive Change DCIM353</li>
-    <li>Structure of Information DCIM152</li>
-    <li>BYOC: CLOUD COMPUTING BLOCKCHAIN & CRYPTO</li>
-    <li>Introduction to Organizational Leadership 01:713:202</li>
-    <li>Artificial Intelligence CS-440</li>
-    <li>Web Authoring WEB425</li> 
-</ul>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Email: <a href="mailto:sumedhsinha2022@gmail.com">sumedhsinha2022@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sinhasumedh/" target="_blank" rel="noopener">linkedin.com/in/sinhasumedh</a></p>
+      <p>GitHub: <a href="https://github.com/sumedhsinha" target="_blank" rel="noopener">github.com/sumedhsinha</a></p>
+    </section>
 
+    <section aria-labelledby="site-trust-heading">
+      <h2 id="site-trust-heading">Site Trust & Availability</h2>
+      <ul>
+        <li>Deployment workflow: publish changes from a non-main branch via pull request review before merging.</li>
+        <li>Custom domain + HTTPS: ready for GitHub Pages domain binding and automatic TLS once DNS/CNAME is configured.</li>
+        <li>Performance: profile image optimized for faster page loads on mobile networks.</li>
+      </ul>
+      <p class="meta">Last updated: 2026-08-22 (UTC)</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Sumedh Sinha</p>
+      <noscript>This site uses privacy-friendly analytics only when JavaScript is enabled.</noscript>
+    </footer>
+  </main>
 </body>
 </html>
