@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://sumedhsinha.github.io/">
   <meta property="og:image" content="https://sumedhsinha.github.io/files/cropped_pic.png">
   <link rel="icon" type="image/png" href="/files/cropped_pic.png">
+  <!-- Optional analytics: self-host Plausible script with SRI and enable when needed. -->
   <style>
     :root {
       --bg: #f7fafc;
@@ -66,6 +67,11 @@
       color: var(--muted);
       font-weight: 600;
       font-size: 0.95rem;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--accent);
     }
 
     .hero,
@@ -172,13 +178,18 @@
       margin-top: 1.2rem;
     }
 
+    .footer-wrap {
+      width: min(1000px, 92vw);
+      margin: 0 auto;
+      padding: 0 0 2rem;
+    }
+
     @media (max-width: 700px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
       .hero img { margin: 0 auto; }
       .cta-row { justify-content: center; }
     }
   </style>
-  <script defer data-domain="sumedhsinha.github.io" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
 </head>
 <body>
   <nav class="nav" aria-label="Primary">
@@ -199,10 +210,10 @@
         <h1>Sumedh Sinha</h1>
         <p class="subtitle">Computer Science Graduate · Rutgers University, New Brunswick (Class of 2026)</p>
         <p class="value-prop">I am seeking software engineering roles focused on backend systems, distributed platforms, and applied AI solutions.</p>
-        <div class="cta-row" role="group" aria-label="Primary links">
-          <a class="btn primary" href="/files/Sumedh_Sinha_resume.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="btn secondary" href="https://github.com/sumedhsinha" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/sinhasumedh/" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="cta-row" aria-label="Primary links">
+          <a class="btn primary" href="/files/Sumedh_Sinha_resume.pdf" target="_blank" rel="noopener" aria-label="Resume (opens PDF in new tab)">Resume (PDF)</a>
+          <a class="btn secondary" href="https://github.com/sumedhsinha" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/sinhasumedh/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
           <a class="btn secondary" href="mailto:sumedhsinha2022@gmail.com">Contact me</a>
         </div>
       </div>
@@ -297,20 +308,18 @@
       <p>GitHub: <a href="https://github.com/sumedhsinha" target="_blank" rel="noopener">github.com/sumedhsinha</a></p>
     </section>
 
-    <section aria-labelledby="site-trust-heading">
-      <h2 id="site-trust-heading">Site Trust & Availability</h2>
-      <ul>
-        <li>Secure delivery over HTTPS on GitHub Pages.</li>
-        <li>Custom domain support can be enabled for a cleaner professional URL.</li>
-        <li>Profile image optimized for faster page loads on mobile networks.</li>
-      </ul>
-      <p class="meta">Last updated: 2026-08-22 (UTC)</p>
-    </section>
-
-    <footer>
-      <p>© 2026 Sumedh Sinha</p>
-      <noscript>This site uses privacy-friendly analytics only when JavaScript is enabled.</noscript>
-    </footer>
   </main>
+  <footer>
+    <div class="footer-wrap">
+      <p>© 2026 Sumedh Sinha</p>
+      <p class="meta">HTTPS enabled on GitHub Pages · Custom domain ready · Last updated: <span id="last-updated">recently</span></p>
+    </div>
+  </footer>
+  <script>
+    const updated = new Date(document.lastModified);
+    if (!Number.isNaN(updated.getTime())) {
+      document.getElementById('last-updated').textContent = updated.toISOString().slice(0, 10);
+    }
+  </script>
 </body>
 </html>
