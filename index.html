@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sumedh Sinha · Software Engineer</title>
-<meta name="description" content="Sumedh Sinha is a software engineer and Rutgers CS graduate (Cum Laude, 2026) building agentic AI, data, and full-stack systems.">
+<meta name="description" content="Sumedh Sinha is a software engineer building agentic AI, data, and full-stack systems.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="files/profile.jpg">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sumedh Sinha · Software Engineer">
-<meta property="og:description" content="Rutgers CS '26. Applied AI engineer, former WINLAB researcher, and 2x hackathon winner.">
+<meta property="og:description" content="Rutgers CS '26. Applied AI engineer">
 <meta property="og:url" content="https://sumedhsinha.github.io/">
 <meta property="og:image" content="https://sumedhsinha.github.io/files/profile.jpg">
 <meta name="twitter:card" content="summary">
@@ -33,6 +33,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#leadership">Leadership</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#thoughts">Thoughts</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
         </ul>
@@ -52,7 +53,7 @@
             <img src="files/profile.jpg" width="480" height="480" alt="Portrait of Sumedh Sinha">
         </picture>
         <div class="hero-text">
-            <p class="eyebrow">Hi, I'm</p>
+            <p class="eyebrow">Hi, I am</p>
             <h1>Sumedh Sinha</h1>
             <!-- TODO: tweak this one-liner to match the roles you're targeting -->
             <p class="tagline">Software engineer building <strong>agentic AI</strong> workflows, reliable systems, and things people actually use.</p>
@@ -239,6 +240,22 @@
         </div>
     </section>
 
+    <!-- ===== Thoughts ===== -->
+    <!-- New post? Add an <li> here AND in thoughts/index.html (newest first). Keep ~3 here. -->
+    <section class="section container" id="thoughts">
+        <h2>Thoughts</h2>
+        <ul class="post-list">
+            <li>
+                <a href="thoughts/example-post.html">
+                    <span class="post-title">A tour of everything a post can do</span>
+                    <span class="post-dek">The template for every post on this site: headings, callouts, code, figures, tables, and more.</span>
+                </a>
+                <time datetime="2026-10-31">Oct 31, 2026</time>
+            </li>
+        </ul>
+        <p><a class="more-link" href="thoughts/">All thoughts →</a></p>
+    </section>
+
     <!-- ===== Skills ===== -->
     <section class="section container" id="skills">
         <h2>Skills</h2>
@@ -293,19 +310,9 @@
 </main>
 
 <footer class="container footer">
-    <p>© <span id="year">2026</span> Sumedh Sinha ~ Made with Claude Code, hosted on GitHub Pages</p>
+    <p>© <span id="year">2026</span> Sumedh Sinha ~ Made with Claude Code, hosted on GitHub Pages. </p>
 </footer>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.querySelector(".theme-toggle").addEventListener("click", () => {
-        const root = document.documentElement;
-        const dark = root.dataset.theme
-            ? root.dataset.theme === "dark"
-            : matchMedia("(prefers-color-scheme: dark)").matches;
-        root.dataset.theme = dark ? "light" : "dark";
-        try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-    });
-</script>
+<script src="site.js"></script>
 </body>
 </html>
