@@ -288,6 +288,14 @@ svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-widt
 .post-nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .post-nav a { text-decoration: none; font-weight: 600; }
 
+/* ===== Hiding (how-to at the top of thoughts/example-post.html) ===== */
+html:not(.show-hidden) [data-hidden] { display: none !important; }
+.show-hidden [data-hidden] { outline: 2px dashed #d97706; outline-offset: 4px; }
+html[data-draft] body::before {
+    content: "DRAFT · not listed · not indexed"; display: block; text-align: center;
+    background: #d97706; color: #fff; font: 600 0.85rem var(--font); padding: 0.4rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 640px) {
     .nav-links { display: none; }

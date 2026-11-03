@@ -13,6 +13,22 @@
        index.html            (href="thoughts/docplus-caching.html")
   6. Preview: open the file in your browser. Then commit and push.
   Images go in files/ (WebP is best) and are linked as ../files/name.webp
+
+  HIDING THINGS
+  A) data-hidden: hides any element (a post's <li>, a project card, a whole <section>).
+       <li data-hidden> ... </li>
+     It's still in the page source and the URL still works, so it hides, it doesn't protect.
+     Add ?preview to the URL (e.g. index.html?preview) to see hidden items outlined in orange.
+  B) Draft post page: add data-draft to <html> and the robots line to <head>:
+       <html lang="en" data-draft>
+       <meta name="robots" content="noindex">
+     Shows an orange DRAFT banner and keeps search engines away. Remove both to publish.
+  C) Not on the live site at all: start the file name with an underscore:
+       thoughts/_docplus-caching.html
+     GitHub Pages (Jekyll) skips files starting with "_", so the URL is a 404 for everyone,
+     but you can still open it locally. Rename it without the "_" to publish.
+     Note: the file is still visible in the public GitHub repo. Only this works while the
+     repo has no .nojekyll file.
   ================================================================
 -->
 <html lang="en">
@@ -27,7 +43,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="A tour of everything a post can do"> <!-- EDIT -->
 <meta property="og:description" content="The template for every post on this site.">
-<meta property="og:url" content="https://sumedhsinha.github.io/thoughts/example-post.html"> <!-- EDIT -->
+<meta property="og:url" content="https://sumedhsinha.github.io/thoughts/_example-post.html"> <!-- EDIT -->
 <meta property="og:image" content="https://sumedhsinha.github.io/files/profile.jpg">
 <meta name="twitter:card" content="summary">
 

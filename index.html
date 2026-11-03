@@ -33,7 +33,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#leadership">Leadership</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#thoughts">Thoughts</a></li>
+            <li data-hidden><a href="#thoughts">Thoughts</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
         </ul>
@@ -241,12 +241,13 @@
     </section>
 
     <!-- ===== Thoughts ===== -->
-    <!-- New post? Add an <li> here AND in thoughts/index.html (newest first). Keep ~3 here. -->
-    <section class="section container" id="thoughts">
+    <!-- New post? Add an <li> here AND in thoughts/index.html (newest first). Keep ~3 here.
+         Hide anything on this page (post, card, section) with data-hidden. Preview: index.html?preview -->
+    <section class="section container" id="thoughts" data-hidden> <!-- remove data-hidden (here and on the nav link) once there is a real post -->
         <h2>Thoughts</h2>
         <ul class="post-list">
-            <li>
-                <a href="thoughts/example-post.html">
+            <li data-hidden>
+                <a href="thoughts/_example-post.html">
                     <span class="post-title">A tour of everything a post can do</span>
                     <span class="post-dek">The template for every post on this site: headings, callouts, code, figures, tables, and more.</span>
                 </a>
